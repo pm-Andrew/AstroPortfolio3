@@ -1,28 +1,30 @@
 ---
 const navItems = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+  { label: "Resume", href: "/resume" },
+  { label: "Blog", href: "/blog" },
 ];
 ---
 
 <nav id="main-menu" aria-label="Primary" class="flex flex-wrap px-4 pt-6 pb-2">
-    <div
-        class="grid mx-2 my-1 p-3 text-rose-600 font-semibold rounded-xl
+  <div
+    class="grid mx-2 my-1 p-3 text-rose-600 font-semibold rounded-xl
         inset-ring-4 inset-ring-rose-600/75 border-stone-300 border-2"
-    >
-        Andrew
-        <br />
-        <span class="mt-1 text-red-600">Sabourin</span>
-    </div>
-    <div class="my-6">
-        {
-            navItems.map((item) => (
-                <a class="mx-2 text-rose-600 font-semibold" href={item.href}>
-                    {item.label}
-                </a>
-            ))
-        }
-    </div>
+  >
+    Andrew
+    <br />
+    <span class="mt-1 text-red-600">Sabourin</span>
+  </div>
+  <div class="my-6">
+    {
+      navItems.map((item) => (
+        <a class="mx-2 text-rose-600 font-semibold" href={item.href}>
+          {item.label}
+        </a>
+      ))
+    }
+  </div>
 </nav>
