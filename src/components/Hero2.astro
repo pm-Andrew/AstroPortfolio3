@@ -1,0 +1,109 @@
+---
+// import { ArrowDown } from "lucide-react";
+import githubDefault from "../assets/github.png";
+import githubHover from "../assets/github_hover.png";
+import linkedinDefault from "../assets/linkedin.png";
+import linkedinHover from "../assets/linkedin_hover.png";
+---
+
+<section
+  id="home"
+  class="min-h-screen flex items-center justify-center relative overflow-hidden
+        bg-linear-to-t from-teal-800/45 from-8% to-teal-800/75 via-14%"
+>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="max-w-4xl mx-auto text-center animate-reveal-up">
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white/75 text-shadow-white text-shadow-xs"
+      >
+        Andrew <span class="text-cyan-400 text-shadow-cyan-600 text-shadow-xs">
+          Sabourin</span
+        >
+      </h1>
+      <h2 class="text-lg sm:text-xl md:text-2xl text-amber-600 mb-5">
+        Design | Development | Security
+      </h2>
+      <p class="sm:text-xl font-medium text-gray-300 mb-8 max-w-2xl mx-auto">
+        Crafting adaptive accessible solutions through digital means.
+      </p>
+
+      <div class="flex flex-wrap gap-4 justify-center mb-12">
+        <a
+          href="#contact"
+          class="inline-flex items-center justify-center rounded-md px-6 py-3 text-md font-semibold border-3 bg-cyan-600/15 border-cyan-500 text-cyan-500 hover:border-accent hover:text-white hover:bg-cyan-600 transition-colors"
+        >
+          Get In Touch
+        </a>
+        <a
+          href="#projects"
+          class="inline-flex items-center justify-center rounded-md px-6 py-3 text-md font-semibold border-3 bg-orange-600/15 border-orange-500 text-orange-500 hover:border-accent hover:bg-orange-500 hover:text-white transition-colors"
+        >
+          View Projects
+        </a>
+      </div>
+
+      <div class="flex gap-6 justify-center">
+        <a href="https://github.com/pm-Andrew" target="_blank" class="group">
+          <img
+            src={githubDefault.src}
+            alt="GitHub invertocat"
+            height="38"
+            width="38"
+            class="group-hover:hidden rounded-full"
+          />
+          <img
+            src={githubHover.src}
+            alt="GitHub invertocat"
+            height="38"
+            width="38"
+            class="hidden group-hover:block rounded-full"
+          />
+        </a>
+        <a
+          href="https://linkedin.com/andrewsabourin"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group"
+          aria-label="LinkedIn"
+        >
+          <img
+            src={linkedinDefault.src}
+            alt="Linkedin Blue Square"
+            height="38"
+            width="38"
+            class="group-hover:hidden rounded-full"
+          />
+          <img
+            src={linkedinHover.src}
+            alt="Linkedin Blue Circle"
+            height="38"
+            width="38"
+            class="hidden group-hover:block rounded"
+          />
+        </a>
+        <!-- 
+                 ** Hide 'Email Me' until services are set **
+                <a
+                    href="mailto:john@example.com"
+                    class="text-gray-300 hover:text-cyan-400 transition-colors"
+                    aria-label="Email"
+                >
+                    <Mail size={24} />
+                </a> -->
+        <!-- 
+                ** Good Spot for Blog **
+                <a
+                    href="mailto:john@example.com"
+                    class="text-gray-300 hover:text-cyan-400 transition-colors"
+                    aria-label="Email"
+                >
+                    <Mail size={24} />
+                </a> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-pulse">
+  <ArrowDown className="animate-bounce text-amber-700" size={36} />
+</div> -->
