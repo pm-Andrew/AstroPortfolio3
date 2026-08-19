@@ -4,30 +4,40 @@ import githubDefault from "../assets/github.png";
 import githubHover from "../assets/github_hover.png";
 import linkedinDefault from "../assets/linkedin.png";
 import linkedinHover from "../assets/linkedin_hover.png";
+import Navigation from "./Navigation.astro";
 ---
 
-<section
+<aside
   id="home"
-  class="min-h-screen flex items-center justify-center relative overflow-hidden
-        bg-linear-to-t from-teal-800/45 from-8% to-teal-800/75 via-14% w-full"
+  class="min-h-screen w-.50/3 relative border-2 rounded-2xl p-1 border-black"
 >
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="max-w-2xl mx-auto text-center animate-reveal-up">
-      <h1
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white/75 text-shadow-white text-shadow-xs"
-      >
-        Andrew <span class="text-cyan-400 text-shadow-cyan-600 text-shadow-xs">
-          Sabourin</span
+  <div class="px-2 py-20 text-clipcol-span-1">
+    <!-- INFO SECTION -->
+    <div class="mx-2 justify-start">
+      <h1>
+        <a
+          href="#home"
+          class="nav-link 2xl:text-4xl sm:text-3xl md:text-2xl lg:text-3xl font-bold mb-0 text-emerald-600 hover:text-emerald-800 text-shadow-emerald-400 text-shadow-xs"
+          data-href="
+            #home"
         >
+          Andrew Sabourin
+        </a>
       </h1>
-      <h2 class="text-lg sm:text-xl md:text-2xl text-amber-600 mb-5">
+      <p class="mt-1 text-lg sm:text-sm md:text-med text-amber-600">
         Design | Development | Security
-      </h2>
-      <p class="sm:text-xl font-medium text-gray-300 mb-8 max-w-2xl mx-auto">
+      </p>
+      <hr class="mt-2 border-gray-300" />
+      <Navigation />
+      <p
+        class="2xl:text-xl lg:text-xl med:text-lg sm:text-lg font-medium text-gray-300 mb-8 min-w-max border-2 border-red-400 rounded"
+      >
         Crafting adaptive accessible solutions through digital means.
       </p>
-
-      <div class="flex flex-wrap gap-4 justify-center mb-12">
+      <!-- BUTTONS  -->
+      <div
+        class="flex flex-wrap gap-4 justify-start mb-12 border-2 border-red-400 rounded-2xl"
+      >
         <a
           href="#contact"
           class="inline-flex items-center justify-center rounded-md px-6 py-3 text-md font-semibold border-3 bg-cyan-600/15 border-cyan-500 text-cyan-500 hover:border-accent hover:text-white hover:bg-cyan-600 transition-colors"
@@ -41,8 +51,10 @@ import linkedinHover from "../assets/linkedin_hover.png";
           View Projects
         </a>
       </div>
-
-      <div class="flex gap-6 justify-center">
+      <!-- SOCIAL -->
+      <div
+        class="flex justify-start gap-2 my-1.5 border-2 border-red-400 rounded"
+      >
         <a href="https://github.com/pm-Andrew" target="_blank" class="group">
           <img
             src={githubDefault.src}
@@ -60,7 +72,7 @@ import linkedinHover from "../assets/linkedin_hover.png";
           />
         </a>
         <a
-          href="https://linkedin.com/andrewsabourin"
+          href="https://linkedin.com/in/andrewsabourin"
           target="_blank"
           rel="noopener noreferrer"
           class="group"
@@ -102,8 +114,10 @@ import linkedinHover from "../assets/linkedin_hover.png";
       </div>
     </div>
   </div>
-</section>
+</aside>
 
-<!-- <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-pulse">
+<!-- ----   ADD REACT COMPONENT FOR ARROW DOWN   ---- 
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-pulse">
   <ArrowDown className="animate-bounce text-amber-700" size={36} />
-</div> -->
+</div> 
+-->
