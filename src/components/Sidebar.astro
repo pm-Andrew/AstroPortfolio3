@@ -9,73 +9,74 @@ import Navigation from "./Navigation.astro";
 
 <aside
   id="home"
-  class="columns-3xs row-span-full relative shadow-lg bg-night-indigo outline-paper-white/75 hover:outline-paper-white outline-4 rounded-2xl"
+  class="grid grid-cols-3 relative shadow-lg bg-night-indigo outline-paper-white/75 hover:outline-paper-white outline-4 rounded-2xl"
 >
-  <div class="px-2 py-10 text-clip col-span-1">
-    <!-- INFO SECTION -->
-    <div class="mx-2 justify-start text-center">
+  <!-- INFO SECTION -->
+  <div class="mx-2 py-2 col-span-1">
+    <div
+      class="box-border flex justify-items-center-safe border-2 border-paper-white/75 rounded-2xl"
+    >
       <h1
-        class="2xl:text-4xl sm:text-3xl md:text-3xl lg:text-3xl font-bold text-red-600 hover:text-red-50"
+        class="py-2 2xl:text-4xl sm:text-3xl md:text-3xl lg:text-3xl font-bold text-red-600 hover:text-red-50"
       >
         <a href="#home" class="nav-link" data-href="
-            #home">
+              #home">
           Andrew Sabourin
         </a>
       </h1>
       <p class="my-1 text-lg font-bold sm:text-sm md:text-med text-white">
         Design | Development | Security
       </p>
+    </div>
 
-      <hr class="mt-4 border-gray-300" />
-      <Navigation />
+    <!-- <hr class="mt-4 border-gray-300" /> -->
+    <Navigation />
 
-      <!-- SOCIAL 
+    <!-- SOCIAL 
        THESE NEED TO BE CONVERTED INTO A IMAGE COMPONENT -->
-      <hr class="my-8 border-gray-300" />
-      <div class="flex justify-center gap-2 my-1.5">
-        <a href="https://github.com/pm-Andrew" target="_blank" class="group">
-          <img
-            src={githubDefault.src}
-            alt="GitHub invertocat"
-            height="38"
-            width="38"
-            class="group-hover:hidden rounded-full"
-          />
-          <img
-            src={githubHover.src}
-            alt="GitHub invertocat"
-            height="38"
-            width="38"
-            class="hidden group-hover:block rounded-full"
-          />
-        </a>
-        <a
-          href="https://linkedin.com/in/andrewsabourin"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group"
-          aria-label="LinkedIn"
-        >
-          <img
-            src={linkedinDefault.src}
-            alt="Linkedin Blue Square"
-            height="38"
-            width="38"
-            class="group-hover:hidden rounded-full"
-          />
-          <img
-            src={linkedinHover.src}
-            alt="Linkedin Blue Circle"
-            height="38"
-            width="38"
-            class="hidden group-hover:block rounded"
-          />
-        </a>
-      </div>
+    <div class="flex justify-center gap-2 my-1.5">
+      <a href="https://github.com/pm-Andrew" target="_blank" class="group">
+        <img
+          src={githubDefault.src}
+          alt="GitHub invertocat"
+          height="38"
+          width="38"
+          class="group-hover:hidden rounded-full"
+        />
+        <img
+          src={githubHover.src}
+          alt="GitHub invertocat"
+          height="38"
+          width="38"
+          class="hidden group-hover:block rounded-full"
+        />
+      </a>
+      <a
+        href="https://linkedin.com/in/andrewsabourin"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group"
+        aria-label="LinkedIn"
+      >
+        <img
+          src={linkedinDefault.src}
+          alt="Linkedin Blue Square"
+          height="38"
+          width="38"
+          class="group-hover:hidden rounded-full"
+        />
+        <img
+          src={linkedinHover.src}
+          alt="Linkedin Blue Circle"
+          height="38"
+          width="38"
+          class="hidden group-hover:block rounded"
+        />
+      </a>
     </div>
   </div>
-  <a href="#top" class="mx-2 flex justify-center text-red-600/90">Back to Top</a
-  >
+  <!-- <a href="#top" class="mx-2 flex justify-center text-red-600/90">Back to Top</a
+  > -->
 </aside>
 
 <!-- ----   ADD REACT COMPONENT FOR ARROW DOWN   ---- 

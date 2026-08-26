@@ -9,12 +9,16 @@ const navItems = [
 ];
 ---
 
-<nav id="main-menu" aria-label="Primary" class="py-2">
+<nav
+  id="main-menu"
+  aria-label="Primary"
+  class="py-2 col-span-2 border-b border-gray-300 text-2xl"
+>
   <div class="mt-2 font-semibold">
     {
       navItems.map((item) => (
         <a
-          class="mr-2 text-red-500 font-bold hover:text-white transition-colors"
+          class="mr-2 text-red-500 font-bold hover:text-white/85 transition-colors"
           href={item.href}
         >
           {item.label}
