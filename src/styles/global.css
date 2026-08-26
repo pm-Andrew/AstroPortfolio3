@@ -1,1 +1,146 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------- */
+/* Raw brand colors                   */
+/* ---------------------------------- */
+:root {
+  --tengu-red: #cb2928;
+  --sumi-black: #0d0d0d;
+  --paper-white: #f3f5f8;
+  --mountain-navy: #2e4a7a;
+  --deep-lacquer: #8b1a1a;
+  --void: #9f1033;
+  --night-indigo: #1b2a4a;
+  --mist: #e8edf5;
+}
+
+/* ---------------------------------- */
+/* Light theme (default)              */
+/* ---------------------------------- */
+:root {
+  --background: var(--paper-white);
+  --foreground: var(--sumi-black);
+  --card: #ffffff;
+  --card-foreground: #0d0d0d;
+  --popover: #ffffff;
+  --popover-foreground: #0d0d0d;
+  --primary: var(--tengu-red);
+  --primary-foreground: #ffffff;
+  --secondary: var(--mountain-navy);
+  --secondary-foreground: #ffffff;
+  --muted: var(--mist);
+  --muted-foreground: #5c5c6e;
+  --accent: var(--deep-lacquer);
+  --accent-foreground: #ffffff;
+  --destructive: var(--void);
+  --destructive-foreground: #ffffff;
+  --border: var(--sumi-black);
+  --input: rgba(203, 41, 40, 0.12);
+  --input-background: var(--mist);
+  --switch-background: var(--mist);
+  --ring: var(--tengu-red);
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0d0d0d;
+  --sidebar-primary: #cb2928;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--mist);
+  --sidebar-accent-foreground: #0d0d0d;
+  --sidebar-border: rgba(203, 41, 40, 0.18);
+  --sidebar-ring: #cb2928;
+}
+
+/* ---------------------------------- */
+/* Dark theme (.dark on <html>)       */
+/* ---------------------------------- */
+.dark {
+  --background: var(--sumi-black);
+  --foreground: var(--paper-white);
+  --card: var(--night-indigo);
+  --card-foreground: var(--paper-white);
+  --popover: var(--night-indigo);
+  --popover-foreground: var(--paper-white);
+  --primary: var(--tengu-red);
+  --primary-foreground: #ffffff;
+  --secondary: var(--mountain-navy);
+  --secondary-foreground: #ffffff;
+  --muted: #1f2937;
+  --muted-foreground: #a1a8b8;
+  --accent: var(--deep-lacquer);
+  --accent-foreground: #ffffff;
+  --destructive: var(--void);
+  --destructive-foreground: #ffffff;
+  --border: rgba(232, 237, 245, 0.12);
+  --input: rgba(203, 41, 40, 0.18);
+  --input-background: var(--night-indigo);
+  --switch-background: #1f2937;
+  --ring: var(--tengu-red);
+  --sidebar: var(--night-indigo);
+  --sidebar-foreground: var(--paper-white);
+  --sidebar-primary: var(--tengu-red);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1f2937;
+  --sidebar-accent-foreground: var(--paper-white);
+  --sidebar-border: rgba(232, 237, 245, 0.12);
+  --sidebar-ring: var(--tengu-red);
+}
+
+/* ---------------------------------- */
+/* Tailwind theme mapping             */
+/* Exposes CSS vars as utilities      */
+/* ---------------------------------- */
+@theme inline {
+  /* Raw brand colors -> bg-tengu-red, text-mountain-navy, etc. */
+  --color-tengu-red: var(--tengu-red);
+  --color-sumi-black: var(--sumi-black);
+  --color-paper-white: var(--paper-white);
+  --color-mountain-navy: var(--mountain-navy);
+  --color-deep-lacquer: var(--deep-lacquer);
+  --color-void: var(--void);
+  --color-night-indigo: var(--night-indigo);
+  --color-mist: var(--mist);
+
+  /* Semantic tokens -> bg-primary, text-foreground, etc. */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* ---------------------------------- */
+/* Base element defaults              */
+/* ---------------------------------- */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
