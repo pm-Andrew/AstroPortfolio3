@@ -1,6 +1,5 @@
 ---
 import Header from "../components/Header.astro";
-import Header2 from "../components/Header2.astro";
 import Hero from "../components/Hero.astro";
 import Sidebar from "../components/Sidebar.astro";
 import Layout from "../layouts/Layout.astro";
@@ -11,13 +10,10 @@ import Bento from "../components/Bento.astro";
 ---
 
 <Layout>
-  <!-- <Header /> -->
-  <!-- <Header2 /> -->
-  <main class="columns-1 p-2">
-    <aside>
-      <Sidebar />
-    </aside>
-    <Hero />
-    <Bento />
-  </main>
+  <Header />
+  <!-- <aside>
+    <Sidebar />
+  </aside> -->
+  <Hero />
+  <Bento />
 </Layout>
